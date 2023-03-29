@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Guess the number</title>
+</head>
+<body>
+<div class=msg>
+    Message
+</div>
+
+<div class=btns>
+<form action="/" method="POST">
+
+    <button class=btn type="submit">Too small!</button>
+    <button class=btn type="submit">Too big!</button>
+    <button class=btn type="submit">You win!</button>
+</form>
+</div>
+
+
+{% if result %}
+<hr>
+<p><b>{{ result }}</b></p>
+{% endif %}
+</body>
+</html>
