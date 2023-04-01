@@ -7,30 +7,16 @@
 </head>
 <body>
 <div class="container">
-    <h1>Guessing Game</h1>
     {% if guess %}
-        <h2 class="answer">My guess is {{ guess }}</h2>
-    {% else %}
-        <h2>Think of a number between {{ min }} and {{ max }}:</h2>
-    {% endif %}
-    <form action="/" method="POST">
+        <h1>My guess is {{ guess }}</h1>
         <form action="" method="POST">
-            {% if guess %}
-                <input class="btn" type="submit" name="answer" value="too big">
-                <input class="btn" type="submit" name="answer" value="too small">
-                <input class="btn" type="submit" name="answer" value="you won">
+                <input class="btn" type="submit" name="answer" value="Too big">
+                <input class="btn" type="submit" name="answer" value="Too small">
+                <input class="btn" type="submit" name="answer" value="You win!">
                 <input type="hidden" name="min" value="{{ min }}">
                 <input type="hidden" name="max" value="{{ max }}">
-            {% else %}
-                <input type="hidden" name="min" value="1">
-                <input type="hidden" name="max" value="1000">
-                <br><br>
-                <input class="btn" type="submit" name="start" value="Start">
-            {% endif %}
+                <input type="hidden" name="guess" value="{{ guess }}">
         </form>
-    </form>
-    {% if result %}
-        <h2>{{ result }}</h2>
     {% endif %}
 </div>
 

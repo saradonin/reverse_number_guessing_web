@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Guessing Game</title>
+</head>
+<body>
+<div class="container">
+    {% if guess %}
+        <h1>Yay! I guessed!</h1><br>
+        <h1>Your number is {{ guess }}</h1>
+    {% endif %}
+</div>
+</body>
+</html>
